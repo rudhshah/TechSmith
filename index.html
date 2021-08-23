@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script>
+        //updates the result.value
+        function updateEq(val) {
+            document.getElementById("result").value += val
+        }
+        // clears the equation. 
+            function clearEq() {
+                document.getElementById("result").value = ""
+            }
+            
+        // compute the result using eval() function. 
+        function computeEq() {
+            let eq = document.getElementById("result").value
+            let val = eval(eq)
+            document.getElementById("result").value = val
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <table border="2">
+        <tr>
+            <td colspan="4"><input type="text" id="result" /></td>
+        </tr>
+        <tr>
+            <td style='border:none;'><input type="button" value="7" onclick="updateEq('7')" /> </td>
+            <td style='border:none;'><input type="button" value="8" onclick="updateEq('8')" /> </td>
+            <td style='border:none;'><input type="button" value="9" onclick="updateEq('9')" /> </td>
+            <td style='border:none;'><input type="button" value="/" onclick="updateEq('/')" /> </td>
+        </tr>
+        <tr>
+            <td style='border:none;'><input type="button" value="4" onclick="updateEq('4')" /> </td>
+            <td style='border:none;'><input type="button" value="5" onclick="updateEq('5')" /> </td>
+            <td style='border:none;'><input type="button" value="6" onclick="updateEq('6')" /> </td>
+            <td style='border:none;'><input type="button" value="-" onclick="updateEq('-')" /> </td>
+        </tr>
+        <tr>
+            <td style='border:none;'><input type="button" value="1" onclick="updateEq('1')" /> </td>
+            <td style='border:none;'><input type="button" value="2" onclick="updateEq('2')" /> </td>
+            <td style='border:none;'><input type="button" value="3" onclick="updateEq('3')" /> </td>
+            <td style='border:none;'><input type="button" value="+" onclick="updateEq('+')" /> </td>
+        </tr>
+        <tr>
+            <td style='border:none;'><input type="button" value="c" onclick="clearEq()" /> </td>
+            <td style='border:none;'><input type="button" value="0" onclick="updateEq('0')" /> </td>
+            <td style='border:none;'><input type="button" value="=" onclick="compute()" /> </td>
+            <td style='border:none;'><input type="button" value="x" onclick="updateEq('*')" /> </td>
+        </tr>
+    </table>
+</body>
+
+</html>
