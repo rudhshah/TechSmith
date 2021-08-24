@@ -6,17 +6,19 @@
         function updateEq(val) {
             document.getElementById("result").value += val
         }
-        // clears the equation. 
-            function clearEq() {
-                document.getElementById("result").value = ""
-            }
-            
+        
+         // clears the equation. 
+        function clearEq() {
+            document.getElementById("result").value = ""
+        }
+        
         // compute the result using eval() function. 
         function computeEq() {
             let eq = document.getElementById("result").value
             let val = eval(eq)
             document.getElementById("result").value = val
         }
+        
 
     </script>
 
@@ -48,7 +50,7 @@
         <tr>
             <td style='border:none;'><input type="button" value="c" onclick="clearEq()" /> </td>
             <td style='border:none;'><input type="button" value="0" onclick="updateEq('0')" /> </td>
-            <td style='border:none;'><input type="button" value="=" onclick="compute()" /> </td>
+            <td style='border:none;'><input type="button" value="=" onclick="computeEq()" /> </td>
             <td style='border:none;'><input type="button" value="x" onclick="updateEq('*')" /> </td>
         </tr>
     </table>
